@@ -34,6 +34,64 @@ body {
 	font-family: arsenal_f;
 	background-color: light-dark(var(--dark-color), var(--dark-color));
 }
+.lang-switcher {
+  position: fixed;
+  display: inline-block;
+  font-family: sans-serif;
+  right: 2%;
+  bottom: 5%;
+  z-index: 999999;
+}
+
+/* Кнопка, которая показывает текущий язык */
+.lang-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Список языков — открывается вверх */
+.lang-options {
+  display: none;
+  position: absolute;
+  bottom: 110%; /* 👈 вместо top */
+  left: 0;
+  background-color: #000;
+  border-radius: 6px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.4); /* 👈 тень теперь снизу */
+  min-width: 120px;
+  z-index: 10;
+}
+
+/* Элементы внутри списка */
+.lang-options button {
+  background: none;
+  border: none;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.5s;
+}
+
+.lang-options button:hover {
+  background-color: #222;
+}
+
+/* Показываем список при открытии */
+.lang-switcher.open .lang-options {
+  display: block;
+}
+
 /* === ОСНОВНОЙ КОНТЕЙНЕР ХЕДЕРА === */
 .main-header {
   width: 100%;
@@ -444,3 +502,4 @@ body {
   transform: translateX(8px);
 
 }
+
