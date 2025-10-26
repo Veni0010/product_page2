@@ -396,7 +396,7 @@ body {
   opacity: 0;
 }
 .magic-list__item:hover .item-bg {
-	opacity: 0.8;
+	opacity: 1;
 }
 .magic-list__thumb {
     width: 400px;
@@ -502,4 +502,5 @@ body {
   transform: translateX(8px);
 
 }
+
 
